@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home-container{
+    margin-top: 1em;
+}
+
+/* DEF: Login form styles */
+.login-form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.login-form > .login-label{
+    margin: 0.5em;
+}
+
+.login-label > input{
+    margin-left: 1em;
+}
+
+.login-btn{
+    margin-top: 1em;
+    /* width: 72px; */
+    /* position: relative; */
+    /* left:650px; */
+    /* top: 15px; */
+}
+
+/*login/register switch*/
+.login-login{
+    margin-top: 3em;
+    margin-right: 1em;
+}
+
+.post-card{
+    /* border:1px solid black; */
+    /* margin-bottom: 0.5em; */
+    margin: 1.5em;
+    box-shadow: -4px -4px 10px 1px #97e0dd,
+    2px 2px 10px 0px #5a9c98;
+    border-radius: 0.75em;
+    position: relative;
+}
+
+.post-card > .username{
+    position: absolute;
+    top:1px;
+    left:2px;
+    font-size: 0.85em;
+    text-decoration: underline;
+}
+
+.post-card > .title{
+    margin-bottom: 1em;
+}
+
+.post-card > img{
+    width:250px;
+}
+
+.p-inp{
+    margin-top: 1em;
+    margin-bottom:0.5em;
+    margin-left: -2em;
+}
+.p-btn{
+    /* position: absolute;
+    bottom: 1em;
+    left: 490px; */
+    position: relative;
+    margin-left: 1em;
+    top: -20px;
+    /* margin-top: -100px; */
+}
+
+.comments-container{
+    /* border:1px solid red; */
+    margin-bottom:2px;
+    position: relative;
+}
+
+.comment-card{
+    /* border:1px solid brown; */
+    margin-bottom: 0.4em;
+    position: relative;
+}
+
+.inp-inp{
+    border:none;
+    outline:none;
+    background:transparent;
+    border-radius: 8px;
+    padding:0.25em 0.5em;
+    box-shadow: -3px -2px 8px 4px #97e0dd,
+    2px 2px 8px 3px #5a9c98;
+}
+
+.comment-card > .username{
+    position: absolute;
+    top:0;
+    left:0;
+    font-size:0.8em;
+    text-decoration: underline;
+}
+
+.comment-card > .body{
+    margin-top: 0.7em;
+    margin-bottom: 0.75em;
+}
+.comment-card > .time{
+    position: absolute;
+    top:0;
+    right:0;
+    font-size:0.8em;
+}
+
+.c-inp{
+    /* position: absolute; */
+    /* left: calc(10% + 1.5em); */
+    width:475px;
+    /* margin-bottom: 1em; */
+}
+
+.c-btn{
+    /* position: absolute; */
+/*     
+    left: 235px;*/
+    position: relative;
+    /* position: relative; */
+    /* margin-left: 36em; */
+    /* top: -20px; */
+    left:2%;
+}
+
+/* DEF: mini-comment-card styles (comment-on-comment) */
+.mini-comment-card{
+    /* border:1px solid green; */
+    margin-bottom: 0.2em;
+    position: relative;
+    width:75%;
+    margin:0.2em auto;
+}
+
+.mini-comment-card > .username{
+    position: absolute;
+    top:0;
+    left:0;
+    font-size:0.6em;
+    text-decoration: underline;
+}
+
+.mini-comment-card > .body{
+    margin-top:0.5em;
+    margin-bottom: 0.1em;
+}
+
+.mini-comment-card > .time{
+    position: absolute;
+    top:0;
+    right:0;
+    font-size: 0.7em;
+}
+
+/* ADDED: miniComments popup */
+.mini-comment-card > .menu{
+    position: absolute;
+    top:0;
+    right:20%;
+    cursor:pointer;
+}
+
+.mc-pop{
+    /* border:1px solid blue; */
+    position: absolute;
+    top:0;
+    left:20px;
+    width: 90px;
+    height: 42px;
+    /* right:110px; */
+    display: none;
+    background-color: aliceblue;
+    color: #888;
+    z-index: 10;
+    border-radius: 8px;
+    /* padding-top: 2px; */
+    overflow: hidden;
+}
+
+.mc-pop > p{
+    transition: all 0.3s ease-in-out;
+}
+
+.mc-pop > p:hover{
+    background-color: rgb(233, 234, 235);
+}
+
+.mc-pop-inp-div{
+    display: none;
+    top:0px;
+    left:20px;
+    z-index: 11;
+    position: relative;
+}
+
+/*NEW: optional style for inputs */
+.inp-inp{
+    background-color: var(--bg-color-3);
+}
+/* ADDED: post edit popups */
+.p-menu{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.p-menu-img{
+    position: absolute;
+    right:0;
+    cursor: pointer;
+}
+
+.p-pop{
+    /* border:1px solid blue; */
+    position: absolute;
+    top:0;
+    right:0;
+    width: 90px;
+    height: 42px;
+    display: none;
+    background-color: aliceblue;
+    color: #888;
+    z-index: 10;
+    border-radius: 8px;
+    /* padding-top: 2px; */
+    overflow: hidden;
+    margin-top: 2.5em;
+}
+
+.p-pop > p{
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.p-pop > p:hover{
+    background-color: rgb(233, 234, 235);
+}
+
+.p-pop-inp-div{
+    margin-top: 5.5em;
+    z-index:11;
+    display: none;
+}
+/* ADDED: comments popup end */
+.c-menu{
+    position: absolute;
+    top:0;
+    right:30%;
+    cursor:pointer;
+    /* border:1px solid black; */
+}
+
+.c-pop{
+    /* border:1px solid blue; */
+    position: absolute;
+    top:0px;
+    left:20px;
+    width: 90px;
+    height: 42px;
+    /* right:110px; */
+    display: none;
+    background-color: aliceblue;
+    color: #888;
+    z-index: 10;
+    border-radius: 8px;
+    /* padding-top: 2px; */
+    overflow: hidden;
+}
+
+.c-pop > p{
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.c-pop > p:hover{
+    background-color: rgb(233, 234, 235);
+}
+
+.c-pop-inp-div{
+    display: none;
+    top:0em;
+    left:-18em;
+    z-index: 11;
+    position: absolute;
+    width:240px;
+}
